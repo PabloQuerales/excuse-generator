@@ -8,10 +8,8 @@ window.onload = function excuseGenerator() {
 	for (let i = 0; i < excuse.length; i++) {
 		let randomNumber = Math.floor(Math.random() * excuse[i].length);
 		for (let index = 0; index < 1; index++) {
-			let element = excuse[i];
-			generatedWord = generatedWord + " " + element[randomNumber];
+			generatedWord = generatedWord + " " + excuse[i][randomNumber];
 		}
 	}
-	let p = document.getElementById("excuse");
-	p.innerHTML = `${generatedWord}`;
+	document.getElementById("excuse").innerHTML = `${generatedWord}`;
 };
